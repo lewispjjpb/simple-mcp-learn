@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc && chmod +x build/server.js",
     "start": "node build/server.js",
-    "dev": "tsc && node build/server.js"
+    "dev": "tsc && node build/server.js",
+    "format": "prettier --write ."
   },
   "bin": {
     "simple-mcp-learn": "./build/server.js"
@@ -18,6 +19,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5"
+  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0",
     "zod": "^3.25.76"
