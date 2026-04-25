@@ -1,6 +1,6 @@
-import { McpServer, RegisteredTool } from "@modelcontextprotocol/sdk/server/mcp.js";
+import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
-import { alertTool } from "./tools/weather.tools";
+import { alertTool, forecastTool } from "./tools";
 
 const server = new McpServer({
   name: "weather",
@@ -10,6 +10,7 @@ const server = new McpServer({
 async function main() {
   const transport = new StdioServerTransport();
   server.registerTool(alertTool.name, alertTool.config, alertTool.callBack);
+  server.registerTool(forecastTool.name, forecastTool.config, forecastTool.callBack)
   await server.connect(transport);
   console.error("Weather MCP Server running on stdio");
 }

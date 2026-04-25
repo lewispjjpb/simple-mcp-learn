@@ -8,7 +8,6 @@
     "build": "tsc && chmod +x build/server.js",
     "start": "node build/server.js",
     "dev": "tsc && node build/server.js"
-
   },
   "bin": {
     "simple-mcp-learn": "./build/server.js"
@@ -25,6 +24,7 @@
   },
   "devDependencies": {
     "@types/node": "^25.6.0",
+    "prettier": "^3.8.3",
     "typescript": "^6.0.3"
   }
 }

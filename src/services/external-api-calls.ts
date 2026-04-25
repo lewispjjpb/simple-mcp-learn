@@ -1,5 +1,5 @@
-import { USER_AGENT } from "./app-constants";
-import { AlertFeature } from "../types";
+import { USER_AGENT } from "../utils/app-constants";
+import { AlertFeature } from "../types/weather-types";
 
 export async function makeNWSRequest<T>(url: string): Promise<T | null> {
   const headers = {
