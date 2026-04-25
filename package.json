@@ -2,10 +2,13 @@
   "name": "simple-mcp-learn",
   "version": "1.0.0",
   "description": "An example MCP server for learning purposes",
-  "main": "server.ts",
+  "main": "build/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && chmod 755 build/server.js"
+    "build": "tsc && chmod +x build/server.js",
+    "start": "node build/server.js",
+    "dev": "tsc && node build/server.js"
+
   },
   "bin": {
     "simple-mcp-learn": "./build/server.js"
